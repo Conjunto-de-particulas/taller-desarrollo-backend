@@ -51,3 +51,5 @@ console.log(convertidorTemp(-30))
 console.log(mejorParidad(9))
 console.log(peorParidad(10))
 console.log(resolvedor(1,5,4, false))
+
+module.exports = {convertidorTemp, mejorParidad, peorParidad, resolvedor}

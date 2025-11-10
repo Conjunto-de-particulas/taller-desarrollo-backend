@@ -69,3 +69,5 @@ function missingNumbers(lista_de_numeros){
     }
     return list_missingNumbers
 }
+
+module.exports = {findMax, includes, sum, missingNumbers}
