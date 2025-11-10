@@ -34,7 +34,7 @@ router.post('/resolvedor', (req, res) => {
   if (a === undefined || b === undefined || c === undefined) {
     return res.status(400).json({error: 'Se requiere parametros a, b,c'})
   }
-  const resultado = resolvedor(a, b, c)
+  const resultado = resolvedor(a, b, c, signo)
   res.json({resultado})
 })
 
