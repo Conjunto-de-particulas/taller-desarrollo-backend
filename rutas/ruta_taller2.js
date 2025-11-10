@@ -4,7 +4,7 @@ const {findMax, includes, sum, missingNumbers} = require('../taller-02')
 
 router.post('/findMax', (req, res) => {
   const {lista_numeros} = req.body
-  if (!Array.isArray(lista)) {
+  if (!Array.isArray(lista_numeros)) {
     return res.status(400).json({error: 'El elemento no es una lista'})
   }
   const resultado = findMax(lista_numeros)
@@ -13,7 +13,7 @@ router.post('/findMax', (req, res) => {
 
 router.post('/includes', (req, res) => {
   const {numero, lista_numeros} = req.body
-  if (!Array.isArray(lista) || numero === undefined) {
+  if (!Array.isArray(lista_numeros) || numero === undefined) {
     return res.status(400).json({error: 'Se requiere un numero y una lista'})
   }
   const resultado = includes(lista_numeros, numero)
@@ -22,7 +22,7 @@ router.post('/includes', (req, res) => {
 
 router.post('/sum', (req, res) => {
   const {lista_numeros} = req.body
-  if (!Array.isArray(lista)) {
+  if (!Array.isArray(lista_numeros)) {
     return res.status(400).json({error: 'El elemento no es una lista'})
   }
   const resultado = sum(lista_numeros)
@@ -31,7 +31,7 @@ router.post('/sum', (req, res) => {
 
 router.post('/missingNumbers', (req, res) => {
   const {lista_numeros} = req.body
-  if (!Array.isArray(lista)) {
+  if (!Array.isArray(lista_numeros)) {
     return res.status(400).json({error: 'El elemento no es una lista'})
   }
   const resultado = missingNumbers(lista_numeros)
